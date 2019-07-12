@@ -1,9 +1,9 @@
-<article class="p-listen-of">
+<article class="h-cite">
             <h2 style="display: none" >
                Listened to <?= htmlentities(strip_tags($vars['object']->getTitle()), ENT_QUOTES, 'UTF-8'); ?>
             </h2>
             
-            <div class="h-cite">                    
+            <div>
                 <?php
                     if ($attachments = $vars['object']->getAttachments()) {
                         foreach ($attachments as $attachment) {
@@ -43,7 +43,7 @@
                     <?php
                     } else {
                     ?>
-                   Listened to <a href="<?= $vars['object']->getMediaURL() ?>" class="p-name"><?= htmlentities(strip_tags($vars['object']->getTitle()), ENT_QUOTES, 'UTF-8'); ?></a>
+                   Listened to <a href="<?= $vars['object']->getMediaURL() ?>" class="u-listen-of"><?= htmlentities(strip_tags($vars['object']->getTitle()), ENT_QUOTES, 'UTF-8'); ?></a>
                     <?php
                     }
                     ?>
